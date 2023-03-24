@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="shortcut icon"
+      href="imges/chess-board-solid.svg"
+      type="image/x-icon"
+    />
+    <title>Memory Game</title>
+  </head>
+  <body>
+    <div class="controll-buttons">
+      <span class="startgame">Start Game</span>
+    </div>
+    <div class="info-container">
+      <div class="name">Hello: <span></span></div>
+      <div class="tries">Wrong tries: <span>0</span></div>
+    </div>
+    <div class="timersection hide">
+      <div class="timerdiv"></div>
+    </div>
+    <div class="tryagin">Time Completed Click To Try Agin</div>
+    <div class="memory-game">
+      <div class="game-block" data-technology="chess">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/chess-board-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="chess">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/chess-board-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="shuttle">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/shuttle-van-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="shuttle">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/shuttle-van-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="space">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/space-shuttle-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="space">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/space-shuttle-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="stopwatch">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/stopwatch-20-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="stopwatch">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/stopwatch-20-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="store-alt-slash">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/store-alt-slash-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="store-alt-slash">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/store-alt-slash-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="store-alt-solid">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/store-alt-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="store-alt-solid">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/store-alt-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="store-slash-solid">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/store-slash-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="store-slash-solid">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/store-slash-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="store-solid">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/store-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="store-solid">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/store-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="subscript-solid">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/subscript-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="subscript-solid">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/subscript-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="suitcase-solid">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/suitcase-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="suitcase-solid">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/suitcase-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="truck-solid">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/truck-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="truck-solid">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/truck-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="vest-solid">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/vest-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="vest-solid">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/vest-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="warehouse-solid">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/warehouse-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="warehouse-solid">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/warehouse-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="weight-solid">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/weight-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="weight-solid">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/weight-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="x-ray-solid">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/x-ray-solid.svg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="x-ray-solid">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imges/x-ray-solid.svg" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="history">
+      <div class="clearhistory">Clear History</div>
+    </div>
+    <!--AudioS -->
+    <audio class="backgroundsound" src="sounds/backgroundSound.mp3"></audio>
+    <audio class="success" src="sounds/success.mp3"></audio>
+    <audio class="invalid" src="sounds/invalid-selection.mp3"></audio>
+    <!-- -->
+    <script src="javascript/index.js"></script>
+  </body>
+</html>

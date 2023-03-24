@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Tahoma, sans-serif;
+}
+
+.controll-buttons {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(3, 169, 244, 0.9);
+}
+
+.controll-buttons .startgame {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f44336;
+    color: #fff;
+    font-size: 30px;
+    padding: 15px 25px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 6px;
+}
+
+@media (max-width: 767px) {
+    .controll-buttons .startgame {
+        font-size: 15px;
+    }
+}
+
+.info-container {
+    width: calc(100% - 40px);
+    margin: 20px auto 0;
+    background-color: #f6f6f6;
+    padding: 20px;
+    font-size: 24px;
+    overflow: hidden;
+    border: 2px solid #2196f3;
+}
+
+@media (max-width: 767px) {
+    .info-container {
+        margin-top: 20px;
+    }
+}
+
+.info-container .name {
+    float: left;
+    width: 50%;
+
+}
+
+.info-container .tries {
+    float: right;
+    width: 50%;
+    text-align: right;
+
+}
+
+@media (max-width: 767px) {
+
+    .info-container .name,
+    .info-container .tries {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    .info-container .name {
+        margin-bottom: 10px;
+    }
+}
+
+.memory-game {
+    display: flex;
+    width: calc(100% - 40px);
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+
+@media (max-width: 767px) {
+    .memory-game {
+        width: 100%;
+    }
+}
+
+.memory-game.no-clicking {
+    pointer-events: none;
+}
+
+.memory-game .game-block {
+    height: 200px;
+    transition: transform .5s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+    flex: 1 0 200px;
+    margin: 0 10px 20px;
+}
+
+
+.memory-game .game-block .front {
+    background-color: #333;
+    line-height: 200px;
+}
+
+.memory-game .game-block .front::before {
+    content: '?';
+    color: #fff;
+    font-size: 140px;
+    font-weight: bold;
+}
+
+.memory-game .game-block .back {
+    background-color: #eee;
+    transform: rotateY(180deg);
+}
+
+.memory-game .game-block .back img {
+    width: 140px;
+    height: 140px;
+    margin-top: 30px;
+}
+
+.memory-game .game-block .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    backface-visibility: hidden;
+    border: 5px solid #2196f3;
+}
+
+.memory-game .game-block.is-flipped,
+.memory-game .game-block.has-match {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    pointer-events: none;
+}
+
+.memory-game.timecompleted {
+    pointer-events: none;
+
+}
+
+.timersection {
+    padding: 2px;
+    background-color: #CDD0D5;
+    font-size: 22px;
+    width: calc(100% - 40px);
+    margin: 5px 20px;
+    transition: 2.3s;
+    border-radius: 29px;
+}
+
+
+.timersection.hide {
+    display: none;
+}
+
+.timerdiv {
+    background-color: #43655A;
+    height: 20px;
+    transition: 2.3s;
+    border-radius: 29px;
+}
+
+.tryagin {
+    display: none;
+    transition: .3s;
+}
+
+.tryagin.gametimecompleted {
+    display: block;
+    padding: 20px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1.8;
+    text-align: center;
+    width: fit-content;
+    margin: 20px auto;
+    border-radius: 6px;
+}
+
+.tryagin.gametimecompleted:hover {
+    background-color: #0092E6;
+}
+
+.history {
+    color: white;
+    width: calc(100% - 40px);
+    margin: 100px auto;
+    margin-top: 20px;
+}
+
+.history .clearhistory {
+    width: fit-content;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 6px;
+    display: none;
+    margin-bottom: 20px;
+}
+
+.history .clearhistory {
+    transition: .3s;
+}
+
+.history .clearhistory:hover {
+    background-color: red;
+}
+
+.history div {
+    border-radius: 6px;
+    padding: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #82999F;
+    border-bottom: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.history div span {
+    order: 1;
+
+}
